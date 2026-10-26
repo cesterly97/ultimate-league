@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0b13"><title>Ultimate League Slots</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand"><div class="crest">UL</div><div><div class="eyebrow">PLAY AS ONE</div><h1>ULTIMATE <span>LEAGUE</span></h1></div></div><div class="wallet">DEMO CREDITS <strong id="credits">1,000</strong></div></header>
+<main>
+<section class="hero"><div class="eyebrow">THE CO-OP SLOT LOUNGE</div><h2>Big spins.<br><span>Shared wins.</span></h2><p>Spin solo or team up with friends. Agree on your contribution and payout shares, then let the reels decide together.</p><div class="pills"><span>✦ 2–8 players</span><span>✦ Shared payouts</span><span>✦ Phone + desktop</span></div></section>
+<section class="panel" id="entry">
+<div class="section-head"><div><div class="eyebrow">WELCOME TO THE LOUNGE</div><h3>Find your game</h3></div><span class="live-dot">DEMO MODE</span></div>
+<label>Your nickname<input id="name" maxlength="18" placeholder="Enter a nickname" value="Lucky Player"></label>
+<div class="actions"><button class="primary" id="create">＋ Create team room</button><button class="secondary" id="solo">Play solo</button></div>
+<div class="join-row"><input id="roomCode" maxlength="6" placeholder="ROOM CODE"><button class="secondary" id="join">Join friend</button></div>
+<p class="hint">Create a room and send your friend the code. Both players open this same website on their own devices.</p>
+</section>
+<section class="panel hidden" id="team">
+<div class="section-head"><div><div class="eyebrow">YOUR CREW</div><h3>Team lounge <span class="code" id="codeLabel"></span></h3></div><button class="text-btn" id="leave">Leave room ↗</button></div>
+<div class="invite"><div><strong>Bring your people</strong><p>Share this room code with up to 7 friends.</p></div><button class="secondary small" id="copy">Copy code</button></div>
+<div id="players" class="players"></div>
+<div class="settings"><div class="section-head"><div><div class="eyebrow">SHARED STAKE</div><h3>Contribution & payout shares</h3></div></div><p class="hint">The host sets each player's credits per spin and payout percentage. Shares must total 100%.</p><div id="shareSettings"></div><button class="secondary" id="saveShares">Save team split</button></div>
+<div class="slot-wrap"><div class="reels" id="teamReels"><span>🍒</span><span>💎</span><span>👑</span></div><div class="result" id="teamResult">Waiting for your crew…</div><button class="primary spin" id="teamSpin">✦ SPIN TOGETHER</button><p class="hint center">Only the host starts the spin. All eligible payouts are allocated automatically.</p></div>
+<div class="notice" id="roomMessage"></div>
+</section>
+<section class="panel hidden" id="soloPanel">
+<div class="section-head"><div><div class="eyebrow">JUST YOU & THE REELS</div><h3>Solo spin</h3></div><button class="text-btn" id="back">Back to lounge ↗</button></div>
+<div class="slot-wrap"><div class="reels" id="soloReels"><span>🍒</span><span>🍋</span><span>🔔</span></div><div class="result" id="soloResult">Pick a bet and spin.</div><div class="betrow"><label>Bet amount<select id="bet"><option>5</option><option selected>10</option><option>25</option><option>50</option><option>100</option></select></label><button class="primary" id="soloSpin">SPIN</button></div><p class="hint center">Three matching symbols win the listed multiplier ×5. Two matching symbols win that symbol's multiplier. Demo credits only.</p><button class="text-btn" id="reset">Reset demo credits to 1,000</button></div>
+</section>
+<section class="rules"><div class="eyebrow">HOW TO PLAY</div><h3>Simple rules. Shared strategy.</h3><div class="rulegrid"><article><b>01 / JOIN</b><p>Create a room and invite 1–7 friends with the six-character code.</p></article><article><b>02 / AGREE</b><p>The host sets each player's contribution and payout percentage. Shares must add to 100%.</p></article><article><b>03 / SPIN</b><p>Everyone contributes credits. The server rolls three symbols and calculates the payout.</p></article><article><b>04 / SHARE</b><p>Each player receives the agreed percentage of the total payout. No player-versus-player scoring.</p></article></div></section>
+</main><footer>ULTIMATE LEAGUE SLOTS · PLAY AS ONE<br><span>Prototype uses simulated credits only. No deposits, cash value, or cash prizes.</span></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/socket.io/socket.io.js"></script><script src="/app.js"></script>
+</body></html>
